@@ -18,7 +18,7 @@
             </view>
             <view class="flex-row">
                 <text class="mark">评分</text>
-                <template is="starsTemplate" data="{{stars:movie.stars, score:movie.score}}" />
+                <template is="starsTemplate" data="{{starsArray:movie.stars, average:movie.score}}" />
             </view>
             <view class="flex-row">
                 <text class="mark">导演</text>

@@ -1,9 +1,9 @@
 {
 	"pages": [
-		"pages/movies/movies",
 		"pages/welcome/welcome",
 		"pages/posts/posts",
 		"pages/posts/post-detail/post-detail",
+		"pages/movies/movies",
 		"pages/movies/more-movie/more-movie",
 		"pages/movies/movie-detail/movie-detail"
 	],
@@ -27,5 +27,9 @@
 				"selectedIconPath": "images/tab/dianying_hl.png"
 			}
 		]
-	}
+	},
+	"requiredBackgroundModes": [
+		"audio",
+		"location"
+	]
 }
