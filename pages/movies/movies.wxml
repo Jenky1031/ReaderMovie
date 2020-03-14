@@ -1,6 +1,16 @@
-<import src="movie-list/movie-list-template.wxml"/>
-<view>
-	<template is="movieListTemplate"></template>
-	<template is="movieListTemplate"></template>
-	<template is="movieListTemplate"></template>
+<import src="movie-list/movie-list-template.wxml" />
+<import src="movie-grid/movie-grid-template.wxml" />
+<view class="search">
+    <icon class="search-icon" type="search" size="13" color="#405F80"></icon>
+    <input type="text" placeholder="叶问4、撼山瑶" placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindConfirm"></input>
+	<icon class="xx-icon" type="cancel" bind:tap="onCancelImgTap" wx:if="{{searchPanelShow}}"></icon>
+</view>
+<view class="container" wx:if="{{containerShow}}">
+    <template is="movieListTemplate" data="{{...inTheaters}}"></template>
+    <template is="movieListTemplate" data="{{...comingSoon}}"></template>
+    <template is="movieListTemplate" data="{{...top250}}"></template>
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">	
+    <template is="movieGridTemplate" data="{{...searchResult}}"></template>
 </view>

@@ -3,7 +3,7 @@
 .movie-list-container {
     background-color: #fff;
     display: flex;
-    flex-direction: column;
+	margin-bottom: 30rpx;
 }
 
 .inner-container{
