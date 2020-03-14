@@ -73,5 +73,11 @@ Page({
         this.data.totalCount += 20
         wx.hideNavigationBarLoading()
         wx.stopPullDownRefresh()
-    }
+    },
+	onMovieTap: function (event) {
+		let movieId = event.currentTarget.dataset.id
+		wx.navigateTo({
+			url: '../movie-detail/movie-detail?id=' + movieId
+		})
+	}
 })
